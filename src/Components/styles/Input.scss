@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.label {
+	display: block;
+	font-family: $primaryfont;
+	font-size: 1rem;
+}
+
+.input {
+	grid-row: end;
+	height: 2.5rem;
+	border-radius: 7px;
+	border-width: 0.5px;
+	margin-top: 0.5rem;
+	margin-bottom: 2.5rem;
+	width: 100%;
+}
+
+.requiredSymbol {
+	font-size: 1.2rem;
+	margin-left: 5px;
+	color: $greenmedium;
+}
