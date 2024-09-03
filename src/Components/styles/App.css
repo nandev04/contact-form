@@ -1,0 +1,12 @@
+.containerForm {
+  background-color: white;
+  justify-content: center;
+  display: grid;
+  margin: 5rem 8rem;
+}
+
+.contact {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  color: var(--greydarker);
+}/*# sourceMappingURL=App.css.map */
