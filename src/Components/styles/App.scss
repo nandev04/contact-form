@@ -40,7 +40,25 @@
 }
 
 .messageForm {
-	@include requiredStyle;
+	label {
+		font-family: $primaryfont;
+		font-size: 1rem;
+		display: block;
+
+		span {
+			@include requiredStyle;
+		}
+	}
+}
+
+.messageArea {
+	@include inputStyles;
+	height: 8rem;
+	font-size: 0.9rem;
+
+	&::placeholder {
+		font-family: $primaryfont;
+	}
 }
 
 .submit {
@@ -52,5 +70,6 @@
 	color: white;
 	font-weight: 700;
 	padding: 1rem;
+	cursor: pointer;
 	border-radius: 7px;
 }

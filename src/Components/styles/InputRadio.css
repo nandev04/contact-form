@@ -6,7 +6,8 @@
   border-radius: 7px;
   border-width: 0.5px;
   margin-top: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 12px;
   width: 100%;
   border-color: hsl(186, 15%, 59%);
   margin-left: 0;
@@ -15,11 +16,11 @@
   padding: 5px 10px;
   box-sizing: border-box;
 }
-
 .fiedRadio label {
   font-family: "Karla", sans-serif;
-  margin-left: 0.5rem;
+  margin-left: 0.1rem;
   font-size: 1.05rem;
+  padding: 2px;
 }
 
 .inputRadio {

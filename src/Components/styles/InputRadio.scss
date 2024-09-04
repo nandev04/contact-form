@@ -8,13 +8,12 @@
 	align-content: center;
 	padding: 5px 10px;
 	box-sizing: border-box;
-}
 
-.fiedRadio {
 	label {
 		font-family: $primaryfont;
-		margin-left: 0.5rem;
+		margin-left: 0.1rem;
 		font-size: 1.05rem;
+		padding: 2px;
 	}
 }
 
