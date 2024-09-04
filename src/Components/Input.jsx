@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/Input.css';
 
-const Input = ({ type, id, label, required }) => {
+const Input = ({ label, type, id, required }) => {
 	return (
 		<>
 			{label ? (

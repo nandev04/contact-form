@@ -6,13 +6,15 @@
 }
 
 .input {
+  box-sizing: border-box;
   grid-row: end;
-  height: 2.5rem;
+  height: 2.8rem;
   border-radius: 7px;
   border-width: 0.5px;
-  margin-top: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
   width: 100%;
+  border-color: hsl(186, 15%, 59%);
 }
 
 .requiredSymbol {

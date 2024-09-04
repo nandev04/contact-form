@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './styles/App.css';
 import Input from './Input';
+import InputRadio from './InputRadio';
 
 function App() {
 	return (
@@ -12,6 +13,16 @@ function App() {
 			</div>
 			<div className="emailForm">
 				<Input label={'Email Address'} type={'email'} required={true} />
+			</div>
+			<div className="queryForm">
+				<p className="queryP">
+					Query Type <span>*</span>
+				</p>
+				<InputRadio id={'enquiry'} label={'General Enquiry'} name={'query'} />
+				<InputRadio id={'request'} label={'Support Request'} name={'query'} />
+			</div>
+			<div className="messageForm">
+				<Input label={'Message'} type={'text'} required={true} />
 			</div>
 			<button className="submit">Submit</button>
 		</div>

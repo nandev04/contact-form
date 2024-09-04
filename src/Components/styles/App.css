@@ -22,7 +22,32 @@
        column-gap: 1rem;
 }
 
+.queryForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.queryP {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  display: block;
+}
+.queryP span {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  color: hsl(169, 82%, 27%);
+}
+
+.messageForm {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  color: hsl(169, 82%, 27%);
+}
+
 .submit {
+  box-sizing: border-box;
   width: 100%;
   background-color: hsl(169, 82%, 27%);
   border: none;

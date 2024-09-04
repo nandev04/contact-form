@@ -1,0 +1,17 @@
+@mixin requiredStyle {
+	font-size: 1.2rem;
+	margin-left: 5px;
+	color: $greenmedium;
+}
+
+@mixin inputStyles {
+	box-sizing: border-box;
+	grid-row: end;
+	height: 2.8rem;
+	border-radius: 7px;
+	border-width: 0.5px;
+	margin-top: 0.8rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	border-color: $greymedium;
+}
