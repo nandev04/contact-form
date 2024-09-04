@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+.label {
+  display: block;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+}
+
+.input {
+  box-sizing: border-box;
+  grid-row: end;
+  height: 2.8rem;
+  border-radius: 7px;
+  border-width: 0.5px;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-color: hsl(186, 15%, 59%);
+}
+
+.requiredSymbol {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  color: hsl(169, 82%, 27%);
+}/*# sourceMappingURL=Input.css.map */

@@ -1,28 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-
-
-  // / PRIMARY COLORS 
-  $greenlight: hsl(148, 38%, 91%);
-  $greenmedium: hsl(169, 82%, 27%);
-  $red: hsl(0, 66%, 54%);
-
-  // NEUTRAL COLORS
-  $greymedium: hsl(186, 15%, 59%);
-  $greydarker: hsl(187, 24%, 22%);
-
-  // FONT
-  $primary-font: 'Karla', sans-serif;
-
+@import 'variables';
 
 body,
 p,
 h1,
 h2,
 h3 {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: $greenlight;
+	background-color: $greenlight;
 }

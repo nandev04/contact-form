@@ -1,0 +1,23 @@
+@import '../../mixins';
+@import '../../variables';
+
+.fiedRadio {
+	@include inputStyles;
+	margin-left: 0;
+	margin-right: 0;
+	align-content: center;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.fiedRadio {
+	label {
+		font-family: $primaryfont;
+		margin-left: 0.5rem;
+		font-size: 1.05rem;
+	}
+}
+
+.inputRadio {
+	margin: 0 10px;
+}

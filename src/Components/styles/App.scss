@@ -1,12 +1,56 @@
+@import '../../variables';
+@import '../../mixins';
+
 .containerForm {
-  background-color: white;
-  justify-content: center;
-  display: grid;
-  margin: 5rem 8rem;
+	background-color: white;
+	justify-content: center;
+	margin: 5rem 8rem;
+	padding: 2.5rem;
+	border-radius: 1rem;
 }
 
 .contact {
-  font-family: var(--primary-font);
-  font-weight: 700;
-  color: var(--greydarker);
+	margin-bottom: 2rem;
+	font-family: $primaryfont;
+	font-weight: 700;
+	font-size: 1.6rem;
+	color: $greydarker;
+}
+
+.nameForm {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 1rem;
+}
+
+.queryForm {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 1rem;
+}
+
+.queryP {
+	font-family: $primaryfont;
+	font-size: 1rem;
+	display: block;
+
+	span {
+		@include requiredStyle;
+	}
+}
+
+.messageForm {
+	@include requiredStyle;
+}
+
+.submit {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: $greenmedium;
+	border: none;
+	font-family: $primaryfont;
+	color: white;
+	font-weight: 700;
+	padding: 1rem;
+	border-radius: 7px;
 }

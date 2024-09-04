@@ -1,0 +1,16 @@
+@import '../../variables';
+@import '../../mixins';
+
+.label {
+	display: block;
+	font-family: $primaryfont;
+	font-size: 1rem;
+}
+
+.input {
+	@include inputStyles;
+}
+
+.requiredSymbol {
+	@include requiredStyle();
+}
