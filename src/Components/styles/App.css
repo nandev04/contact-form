@@ -72,6 +72,22 @@
   font-family: "Karla", sans-serif;
 }
 
+.termsForm {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin-bottom: 24px;
+}
+.termsForm input {
+  width: initial;
+  margin: 0;
+}
+.termsForm label {
+  display: inline-block;
+  align-self: center;
+  margin-left: 1rem;
+}
+
 .submit {
   box-sizing: border-box;
   width: 100%;

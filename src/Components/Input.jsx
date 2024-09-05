@@ -1,7 +1,10 @@
 import React from 'react';
 import './styles/Input.css';
+import { useFormContext } from 'react-hook-form';
 
 const Input = ({ label, type, id, required }) => {
+	const { register } = useFormContext();
+
 	return (
 		<>
 			{label ? (
@@ -14,10 +17,20 @@ const Input = ({ label, type, id, required }) => {
 							</>
 						)}
 					</label>
-					<input className="input" type={type} id={id} />
+					<input
+						className="input"
+						type={type}
+						{...register(id)}
+						required={required}
+					/>
 				</>
 			) : (
-				<input className="input" type={type} id={id} />
+				<input
+					className="input"
+					type={type}
+					{...register(id)}
+					required={required}
+				/>
 			)}
 		</>
 	);
