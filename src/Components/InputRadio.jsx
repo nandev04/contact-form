@@ -3,20 +3,25 @@ import './styles/InputRadio.css';
 import { useFormContext } from 'react-hook-form';
 
 const InputRadio = ({ id, value, label, name }) => {
-	const { register } = useFormContext();
+	const {
+		register,
+		formState: { errors },
+	} = useFormContext();
 
 	return (
 		<>
 			<fieldset className="fiedRadio">
-				<input
-					className="inputRadio"
-					type="radio"
-					id={id}
-					value={value}
-					{...register(name)}
-					name={name}
-				/>
-				<label htmlFor={id}>{label}</label>
+				<div>
+					<input
+						className="inputRadio"
+						type="radio"
+						id={id}
+						value={value}
+						name={name}
+						{...register(name, { required: 'Selecione uma opção' })}
+					/>
+					<label htmlFor={id}>{label}</label>
+				</div>
 			</fieldset>
 		</>
 	);

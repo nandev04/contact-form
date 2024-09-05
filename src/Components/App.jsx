@@ -9,7 +9,11 @@ function App() {
 
 	function onSubmitFun(data) {
 		console.log(data);
+		alert('Formulário preenchido com sucesso!');
 	}
+
+	const hasErrorQuery = methods.formState.errors.query;
+	const hasErrorMsg = methods.formState.errors.msg;
 
 	return (
 		<FormProvider {...methods}>
@@ -26,13 +30,13 @@ function App() {
 						label={'First Name'}
 						id={'fname'}
 						type={'text'}
-						required={true}
+						requiredProp={true}
 					/>
 					<Input
 						label={'Last Name'}
 						id={'lname'}
 						type={'text'}
-						required={true}
+						requiredProp={true}
 					/>
 				</div>
 				<div className="emailForm">
@@ -40,7 +44,7 @@ function App() {
 						label={'Email Address'}
 						id={'email'}
 						type={'email'}
-						required={true}
+						requiredProp={true}
 					/>
 				</div>
 				<div className="queryForm">
@@ -52,13 +56,18 @@ function App() {
 						id={'enquiry'}
 						label={'General Enquiry'}
 						name={'query'}
+						requiredProp={true}
 					/>
 					<InputRadio
 						value={'support'}
 						id={'support'}
 						label={'Support Request'}
 						name={'query'}
+						requiredProp={true}
 					/>
+					{hasErrorQuery && (
+						<p className="errorMessage">{hasErrorQuery.message}</p>
+					)}
 				</div>
 				<div className="messageForm" id="msg">
 					<label htmlFor="msg">
@@ -69,15 +78,16 @@ function App() {
 						name="msg"
 						className="messageArea"
 						placeholder="Write your message here!"
-						{...methods.register('msg')}
+						{...methods.register('msg', { required: 'Escreva uma mensagem' })}
 					/>
+					{hasErrorMsg && <p className="errorMessage">{hasErrorMsg.message}</p>}
 				</div>
 				<div className="termsForm">
 					<Input
 						label={'I consent to being contacted by the team'}
 						id={'terms'}
 						type={'checkbox'}
-						required={true}
+						requiredProp={true}
 					/>
 				</div>
 				<button className="submit">Submit</button>
