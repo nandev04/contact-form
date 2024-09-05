@@ -8,7 +8,7 @@
 }
 
 .contact {
-  margin-bottom: 2rem;
+  margin-bottom: 0.4rem;
   font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
@@ -33,6 +33,7 @@
   font-family: "Karla", sans-serif;
   font-size: 1rem;
   display: block;
+  margin-top: 1.5rem;
 }
 .queryP span {
   font-size: 1.2rem;
@@ -40,15 +41,28 @@
   color: hsl(169, 82%, 27%);
 }
 
+.errorMessage {
+  font-family: "Karla", sans-serif;
+  color: hsl(0, 66%, 54%);
+  margin-top: -10px;
+  font-size: 12px;
+  grid-row: 3;
+}
+
 .messageForm label {
   font-family: "Karla", sans-serif;
   font-size: 1rem;
+  margin-top: 1.5rem;
   display: block;
 }
 .messageForm label span {
   font-size: 1.2rem;
   margin-left: 5px;
   color: hsl(169, 82%, 27%);
+}
+
+.errorMessage {
+  margin-top: 5px;
 }
 
 .messageArea {
@@ -58,7 +72,6 @@
   border-radius: 7px;
   border-width: 0.5px;
   margin-top: 0.8rem;
-  margin-bottom: 1.5rem;
   padding: 12px;
   width: 100%;
   border-color: hsl(186, 15%, 59%);
@@ -72,20 +85,29 @@
   font-family: "Karla", sans-serif;
 }
 
-.termsForm {
+.termsForm div {
   display: flex;
-  flex-direction: row-reverse;
+  flex-wrap: wrap;
   justify-content: start;
+  align-items: center;
   margin-bottom: 24px;
+  margin-top: 1.5rem;
 }
-.termsForm input {
+.termsForm div label {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 10px;
+  order: 2;
+}
+.termsForm div input {
   width: initial;
   margin: 0;
 }
-.termsForm label {
-  display: inline-block;
-  align-self: center;
-  margin-left: 1rem;
+.termsForm div .error-msg {
+  display: block;
+  width: 100%;
+  margin-top: -8px;
+  order: 3;
 }
 
 .submit {

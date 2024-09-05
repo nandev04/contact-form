@@ -2,36 +2,34 @@ import React from 'react';
 import './styles/Input.css';
 import { useFormContext } from 'react-hook-form';
 
-const Input = ({ label, type, id, required }) => {
-	const { register } = useFormContext();
+const Input = ({ label, type, id, requiredProp }) => {
+	const {
+		register,
+		formState: { errors },
+	} = useFormContext();
 
 	return (
 		<>
-			{label ? (
-				<>
-					<label className="label" htmlFor={id}>
-						{label}
-						{required && (
-							<>
-								<span className="requiredSymbol">*</span>
-							</>
-						)}
-					</label>
-					<input
-						className="input"
-						type={type}
-						{...register(id)}
-						required={required}
-					/>
-				</>
-			) : (
+			<div>
+				<label className="label" htmlFor={id}>
+					{label}
+					{requiredProp && (
+						<>
+							<span className="requiredSymbol">*</span>
+						</>
+					)}
+				</label>
+
 				<input
+					id={id}
 					className="input"
 					type={type}
-					{...register(id)}
-					required={required}
+					{...register(id, { required: requiredProp })}
 				/>
-			)}
+				{errors?.[id]?.type === 'required' && (
+					<p className="error-msg">Campo obrigatório</p>
+				)}
+			</div>
 		</>
 	);
 };

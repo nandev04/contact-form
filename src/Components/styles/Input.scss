@@ -5,6 +5,7 @@
 	display: block;
 	font-family: $primaryfont;
 	font-size: 1rem;
+	margin-top: 1.5rem;
 }
 
 .input {
@@ -13,4 +14,11 @@
 
 .requiredSymbol {
 	@include requiredStyle();
+}
+
+.error-msg {
+	font-family: $primaryfont;
+	color: $red;
+	margin-top: 8px;
+	font-size: 12px;
 }
